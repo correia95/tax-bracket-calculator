@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#0369a1" />
+
+    <title>Tax Bracket Calculator — marginal vs. effective rate, editable brackets</title>
+    <meta
+      name="description"
+      content="See how progressive tax brackets actually work: marginal rate vs. effective rate, with a full breakdown of how much tax comes from each bracket. Every bracket is editable, with an illustrative example to start from. Not tax advice. Runs entirely in your browser, no sign-up."
+    />
+    <link rel="canonical" href="https://tax-bracket-calculator.correia95.workers.dev/" />
+
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Tax Bracket Calculator" />
+    <meta property="og:description" content="Marginal vs. effective tax rate, with fully editable brackets. Free, in your browser." />
+    <meta property="og:url" content="https://tax-bracket-calculator.correia95.workers.dev/" />
+    <meta property="og:image" content="https://tax-bracket-calculator.correia95.workers.dev/og.svg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Tax Bracket Calculator" />
+    <meta name="twitter:description" content="Marginal vs. effective tax rate, with fully editable brackets. Free, in your browser." />
+    <meta name="twitter:image" content="https://tax-bracket-calculator.correia95.workers.dev/og.svg" />
+
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Tax Bracket Calculator",
+        "url": "https://tax-bracket-calculator.correia95.workers.dev/",
+        "applicationCategory": "FinanceApplication",
+        "operatingSystem": "Any",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "description": "Calculates marginal and effective tax rates from a fully editable progressive bracket table, with a per-bracket breakdown, entirely in the browser."
+      }
+    </script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What's the difference between marginal and effective tax rate?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Marginal rate is the rate on your last dollar of income — the bracket your top dollar falls into. Effective rate is your total tax divided by your total income, almost always lower than the marginal rate, since only the income within each bracket is taxed at that bracket's rate."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Are the example brackets the current official rates?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "The presets are a labeled illustrative example (2024 US federal brackets), not a guarantee of the current year's official numbers, since brackets are adjusted for inflation annually. Every bracket is editable so you can enter current figures or a different country's brackets."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is this tax advice?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. This is a calculator for understanding how progressive tax brackets work, not tax advice. Always verify current figures and consult a tax professional for your actual filing."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is my data sent to a server?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. Every calculation runs in your browser and is only stored in the page's own link."
+            }
+          }
+        ]
+      }
+    </script>
+    <style>
+      .tt-nav { box-sizing: border-box; width: 100%; margin: 0; background: #f1f1f4; border-bottom: 1px solid rgba(0, 0, 0, 0.1); }
+      .tt-nav a { display: inline-flex; align-items: center; gap: 6px; padding: 7px 14px; text-decoration: none; color: #3730a3; font: 600 13px/1 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+      .tt-nav a:hover { color: #1e1b4b; text-decoration: underline; }
+      .tt-nav svg { width: 14px; height: 14px; flex: none; }
+      @media (prefers-color-scheme: dark) {
+        .tt-nav { background: #15151b; border-bottom-color: rgba(255, 255, 255, 0.12); }
+        .tt-nav a { color: #c7d2fe; }
+        .tt-nav a:hover { color: #e0e7ff; }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="tt-nav"><a href="https://tinytools.correia95.workers.dev/" aria-label="TinyTools home — all tools and games"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2 2 11h3v9h5v-6h4v6h5v-9h3z"/></svg><span>TinyTools</span></a></nav>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <noscript>
+      <p style="text-align: center; padding: 20px">
+        This tax bracket calculator needs JavaScript to run the calculation in your browser.
+      </p>
+    </noscript>
+  </body>
+</html>
